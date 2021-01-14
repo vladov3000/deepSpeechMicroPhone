@@ -1,0 +1,24 @@
+{
+  "name": "subtitler",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "rm -rf dist && tsc && ln -s ../src/static/ dist/static",
+    "electron": "npx electron dist/main.js",
+    "start": "npm run build && npm run electron",
+    "watch": "nodemon -w src -e '*' -x 'npm run build'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deepspeech": "^0.9.3",
+    "electron": "^11.0.0",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/dom-mediacapture-record": "^1.0.7",
+    "@types/node": "^14.14.14",
+    "nodemon": "^2.0.6",
+    "prettier": "2.2.1"
+  }
+}
